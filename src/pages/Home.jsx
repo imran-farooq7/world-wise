@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import styles from "./Home.module.css";
 
@@ -16,9 +17,9 @@ const Home = () => {
 					of. Never forget your wonderful experiences, and show your friends how
 					you have wandered the world.
 				</h2>
-				<a className="cta" to="/app">
+				<Link className="cta" to="/app">
 					Start tracking now
-				</a>
+				</Link>
 			</section>
 		</main>
 	);

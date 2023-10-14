@@ -7,6 +7,8 @@ import Pricing from "./pages/Pricing";
 import Product from "./pages/Product";
 import Login from "./pages/Login";
 import Applayout from "./pages/Applayout";
+import CityList from "./components/CityList";
+import CountryList from "./components/CountryList";
 const router = createBrowserRouter([
 	{
 		path: "/",
@@ -29,11 +31,15 @@ const router = createBrowserRouter([
 		element: <Applayout />,
 		children: [
 			{
-				element: <h1>Citites</h1>,
+				element: <CityList />,
+				index: true,
+			},
+			{
+				element: <CityList />,
 				path: "cities",
 			},
 			{
-				element: <h1>Countries</h1>,
+				element: <CountryList />,
 				path: "countries",
 			},
 		],

@@ -9,6 +9,8 @@ import Login from "./pages/Login";
 import Applayout from "./pages/Applayout";
 import CityList from "./components/CityList";
 import CountryList from "./components/CountryList";
+import City from "./components/City";
+import Form from "./components/Form";
 const router = createBrowserRouter([
 	{
 		path: "/",
@@ -41,6 +43,14 @@ const router = createBrowserRouter([
 			{
 				element: <CountryList />,
 				path: "countries",
+			},
+			{
+				element: <Form />,
+				path: "form",
+			},
+			{
+				path: "/app/cities/:id",
+				element: <City />,
 			},
 		],
 	},

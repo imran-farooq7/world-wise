@@ -8,7 +8,7 @@ const Applayout = () => {
 	useEffect(() => {
 		const getcities = async () => {
 			setLoading(true);
-			const res = await fetch("http://localhost:3000/cities");
+			const res = await fetch("http://localhost:3004/cities");
 			const data = await res.json();
 			setCities(data);
 			setLoading(false);

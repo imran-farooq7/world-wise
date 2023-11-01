@@ -3,12 +3,12 @@ import Logo from "./Logo";
 import styles from "./Sidebar.module.css";
 import AppNav from "./AppNav";
 
-const Sidebar = ({ cities, loading }) => {
+const Sidebar = () => {
 	return (
 		<div className={styles.sidebar}>
 			<Logo />
 			<AppNav />
-			<Outlet context={[cities, loading]} />
+			<Outlet />
 			<footer className={styles.footer}>
 				<p>&copy; Copyright {new Date().getFullYear}</p>
 			</footer>

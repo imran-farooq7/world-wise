@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
+import "react-datepicker/dist/react-datepicker.css";
 import Home from "./pages/Home";
 import Pricing from "./pages/Pricing";
 import Product from "./pages/Product";

@@ -3,6 +3,7 @@ import Map from "../components/Map";
 import Sidebar from "../components/Sidebar";
 import styles from "./Applayout.module.css";
 import CitiesProvider from "../context/CitiesContext";
+import User from "../components/User";
 const Applayout = () => {
 	// console.log(cities, "cities");
 	return (
@@ -10,6 +11,7 @@ const Applayout = () => {
 			<div className={styles.app}>
 				<Sidebar />
 				<Map />
+				<User />
 			</div>
 		</CitiesProvider>
 	);

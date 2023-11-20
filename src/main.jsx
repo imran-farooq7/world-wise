@@ -13,6 +13,8 @@ import CountryList from "./components/CountryList";
 import City from "./components/City";
 import Form from "./components/Form";
 import CitiesProvider from "./context/CitiesContext";
+import AuthProvider from "./context/AuthContext";
+import ProtectedRoute from "./components/ProtectedRoute";
 const router = createBrowserRouter([
 	{
 		path: "/",
@@ -32,7 +34,11 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "/app",
-		element: <Applayout />,
+		element: (
+			<ProtectedRoute>
+				<Applayout />
+			</ProtectedRoute>
+		),
 		children: [
 			{
 				element: <CityList />,
@@ -60,6 +66,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
-		<RouterProvider router={router} />
+		<AuthProvider>
+			<RouterProvider router={router} />
+		</AuthProvider>
 	</React.StrictMode>
 );
